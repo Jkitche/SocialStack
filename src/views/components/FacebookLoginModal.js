@@ -23,7 +23,6 @@ const FacebookLoginModal = () => {
 			autoLoad
 			fields="name,email,picture"
 			callback={responseFacebook}
-			icon="fa-facebook"
 			cssClass={FacebookStyles.facebook_button}
 		/>
 	);
