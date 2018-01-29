@@ -2,8 +2,6 @@ import webpack from 'webpack';
 import path from 'path';
 import CompressionPlugin from 'compression-webpack-plugin';
 import WriteFilePlugin from 'write-file-webpack-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 
 const ENV = process.env.NODE_ENV || 'development';
 
@@ -15,7 +13,7 @@ const ENV_PRODUCTION = ENV === 'production';
 const ENV_DEVELOPMENT = ENV === 'development';
 
 const entry = {
-	'social_stack.app': './src/App.js',
+	'public/js/social_stack.app': './src/App.js',
 };
 
 const outputPath = path.resolve(__dirname, './');
@@ -29,16 +27,6 @@ const output = {
 
 const plugins = [
 	new WriteFilePlugin(),
-	new HtmlWebpackPlugin({
-		template: 'index.template.ejs',
-		inject: 'body',
-	}),
-	new FaviconsWebpackPlugin({
-		logo: './src/images/favicon.png',
-		inject: true,
-		title: 'SocialStack',
-		prefix: 'public/images/icons/',
-	}),
 ];
 
 // output gzips for production
@@ -99,7 +87,7 @@ export default {
 			{
 				test: /\.js?$/,
 				include: [
-					path.resolve(__dirname, './client'),
+					path.resolve(__dirname, './src'),
 				],
 				use: {
 					loader: 'babel-loader',
@@ -127,7 +115,7 @@ export default {
 			{
 				test: /\.(scss|css)$/,
 				include: [
-					path.resolve(__dirname, './client'),
+					path.resolve(__dirname, './src'),
 				],
 				exclude: [
 					path.resolve(__dirname, './node_modules'),
