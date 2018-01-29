@@ -1,7 +1,7 @@
 import SSC from 'SSC';
 import React from 'react';
 import FacebookLogin from 'react-facebook-login';
-import { Button, Icon, Modal } from 'semantic-ui-react';
+import FacebookStyles from './styles/facebook.scss';
 
 /**
  * Parses the response from Facebook
@@ -13,34 +13,19 @@ const responseFacebook = (response) => {
 };
 
 /**
- * Generates a trigger button
- * @return {React.ReactNode} Rendered button trigger
- */
-const triggerButton = () => {
-	return (
-		<Button color="facebook">
-			<Icon name="facebook" /> Facebook
-		</Button>
-	);
-};
-
-/**
  * Generates Facebook Login Modal
  * @return {React.ReactNode} Rendered Modal
  */
 const FacebookLoginModal = () => {
 	return (
-		<Modal trigger={triggerButton()}>
-			<Modal.Header>Login to Facebook</Modal.Header>
-			<Modal.Content>
-				<FacebookLogin
-					appId={SSC.appId}
-					autoLoad
-					fields="name,email,picture"
-					callback={responseFacebook}
-				/>
-			</Modal.Content>
-		</Modal>
+		<FacebookLogin
+			appId={SSC.appId}
+			autoLoad
+			fields="name,email,picture"
+			callback={responseFacebook}
+			icon="fa-facebook"
+			cssClass={FacebookStyles.facebook_button}
+		/>
 	);
 };
 
