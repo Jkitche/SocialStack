@@ -15,10 +15,10 @@ const ENV_PRODUCTION = ENV === 'production';
 const ENV_DEVELOPMENT = ENV === 'development';
 
 const entry = {
-	'social_stack.app': './App.js',
+	'social_stack.app': './src/App.js',
 };
 
-const outputPath = path.resolve(__dirname, './dist');
+const outputPath = path.resolve(__dirname, './');
 console.log(`Outputting files to: ${outputPath}`);
 const output = {
 	path: outputPath,
@@ -34,7 +34,7 @@ const plugins = [
 		inject: 'body',
 	}),
 	new FaviconsWebpackPlugin({
-		logo: './images/favicon.png',
+		logo: './src/images/favicon.png',
 		inject: true,
 		title: 'SocialStack',
 		prefix: 'public/images/icons/',
