@@ -6469,6 +6469,10 @@ react-dom@^16.1.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react-facebook-login@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/react-facebook-login/-/react-facebook-login-3.7.2.tgz#a67b55c3ba3e72328813e7e75886af352b62b0b5"
+
 react-highcharts@^15.0.0:
   version "15.0.0"
   resolved "https://registry.yarnpkg.com/react-highcharts/-/react-highcharts-15.0.0.tgz#b3eea96ad6a7f04c3e70827a34e9b1b47d88a2bb"

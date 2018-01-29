@@ -60,6 +60,12 @@
         "import/extensions": [2, { "js": "never" }],
         "quote-props": [0, "consistent-as-needed"],
         "no-lonely-if": 0,
+        "import/no-unresolved": [
+            "error",
+            {
+                'ignore': ['SSC', 'FB'],
+            }
+        ],
     },
     "settings": {
         "import/resolver": {

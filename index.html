@@ -3,15 +3,20 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css" />
 	<title>SocialStack</title>
+	<script>
+		window.CONFIG = {
+			appId: '148455795871362',
+		};
+	</script>
 </head>
 <body>
 	<div id='root' style="min-height: 100vh;"></div>
 	<script>
 	window.fbAsyncInit = function() {
 		FB.init({
-			appId      : '148455795871362',
+			appId      : window.CONFIG.appId,
 			cookie     : true,
 			xfbml      : true,
 			version    : 'v2.11'
@@ -28,9 +33,5 @@
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 </script>
-<<<<<<< HEAD
 <script type="text/javascript" src="public/js/social_stack.app.js"></script></body>
-=======
-<script type="text/javascript" src="/SocialStack/public/js/social_stack.app.js"></script></body>
->>>>>>> c3671e0e3dd11258a37c0a0322a0980e036584df
 </html>

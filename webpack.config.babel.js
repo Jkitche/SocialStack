@@ -80,6 +80,7 @@ export default {
 		extensions: ['.js', '.jsx', '.scss'],
 	},
 	externals: {
+		'SSC': 'window.CONFIG',
 		'FB': 'FB',
 	},
 	module: {
