@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Route, HashRouter } from 'react-router-dom';
 import { Container, Segment, Menu, Image } from 'semantic-ui-react';
 import HomePage from './views/pages/HomePage';
-import FacebookLoginModal from './views/components/FacebookLoginModal';
+import FacebookController from './views/components/FacebookController';
 import favicon from '../public/images/icons/favicon.png';
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
 						</Menu.Item>
 						<Menu.Menu position="right">
 							<Menu.Item>
-								<FacebookLoginModal	/>
+								<FacebookController	/>
 							</Menu.Item>
 						</Menu.Menu>
 					</Container>

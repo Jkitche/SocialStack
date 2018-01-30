@@ -13,7 +13,7 @@ const ENV_PRODUCTION = ENV === 'production';
 const ENV_DEVELOPMENT = ENV === 'development';
 
 const entry = {
-	'public/js/social_stack.app': './src/App.js',
+	'public/js/social_stack.app': './src/connectors/AppConnector.js',
 };
 
 const outputPath = path.resolve(__dirname, './');

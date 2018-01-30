@@ -16,7 +16,7 @@ const responseFacebook = (response) => {
  * Generates Facebook Login Modal
  * @return {React.ReactNode} Rendered Modal
  */
-const FacebookLoginModal = () => {
+const FacebookController = () => {
 	return (
 		<FacebookLogin
 			appId={SSC.appId}
@@ -28,4 +28,4 @@ const FacebookLoginModal = () => {
 	);
 };
 
-export default FacebookLoginModal;
+export default FacebookController;
