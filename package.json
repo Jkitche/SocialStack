@@ -61,7 +61,6 @@
 		"jsdoc": "^3.5.5",
 		"json-loader": "^0.5.7",
 		"node-sass": "^4.7.2",
-		"nodemon": "^1.14.11",
 		"null-loader": "^0.1.1",
 		"postcss-loader": "^2.0.8",
 		"prop-types": "^15.6.0",
@@ -79,11 +78,8 @@
 		"react-transform-catch-errors": "^1.0.2",
 		"react-transform-hmr": "^1.0.4",
 		"redux": "^3.7.2",
-		"resource-router-middleware": "^0.7.0",
 		"sass-loader": "^6.0.6",
 		"semantic-ui-react": "^0.76.0",
-		"sequelize": "^4.22.15",
-		"sequelize-cli": "^3.1.0",
 		"style-loader": "^0.19.0",
 		"url-loader": "^0.6.2",
 		"webpack": "^3.8.1",
@@ -93,8 +89,6 @@
 		"webpack-dev-server": "^2.11.1",
 		"webpack-hot-middleware": "^2.20.0",
 		"webpack-json-loader": "^1.0.0",
-		"winston": "next",
-		"write-file-webpack-plugin": "^4.2.0",
 		"xml-loader": "^1.2.1",
 		"xml2js": "^0.4.19"
 	}

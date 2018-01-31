@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FacebookLogin as FBReactLogin } from 'react-facebook-login';
 import FacebookStyles from './styles/facebook.scss';
 

@@ -1,7 +1,6 @@
 import webpack from 'webpack';
 import path from 'path';
 import CompressionPlugin from 'compression-webpack-plugin';
-import WriteFilePlugin from 'write-file-webpack-plugin';
 
 const ENV = process.env.NODE_ENV || 'development';
 
@@ -13,7 +12,7 @@ const ENV_PRODUCTION = ENV === 'production';
 const ENV_DEVELOPMENT = ENV === 'development';
 
 const entry = {
-	'public/js/social_stack.app': './src/store/connectors/AppConnector.js',
+	'public/js/social_stack.app': './src/App.js',
 };
 
 const outputPath = path.resolve(__dirname, './');
@@ -25,9 +24,7 @@ const output = {
 	chunkFilename: '[name].[chunkhash].js',
 };
 
-const plugins = [
-	new WriteFilePlugin(),
-];
+const plugins = [];
 
 // output gzips for production
 if (ENV_PRODUCTION) {

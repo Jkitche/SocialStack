@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import AppStore from './store/AppStore';
 import NavBar from './components/NavBar';
 import ConnectedFacebookContent from './store/connectors/ConnectedFacebookContent';
 
@@ -19,11 +21,13 @@ const App = (props) => {
 	};
 
 	return (
-		<div style={{ minHeight: '100vh' }}>
-			<NavBar />
-			{props.facebookLoggedIn ? <ConnectedFacebookContent /> : null}
-		</div>
+		<Provider store={AppStore}>
+			<div style={{ minHeight: '100vh' }}>
+				<NavBar />
+				{props.facebookLoggedIn ? <ConnectedFacebookContent /> : null}
+			</div>
+		</Provider>
 	);
 };
 
-ReactDOM.render(<App />, global.document.getElementById('root'));
+ReactDOM.render(React.createElement(App), global.document.getElementById('root'));

@@ -69322,13 +69322,13 @@ exports.default = ConnectedFacebookLogin;
 
 exports.__esModule = true;
 
-var _propTypes = __webpack_require__(42);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
 var _react = __webpack_require__(27);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(42);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _reactFacebookLogin = __webpack_require__(786);
 
