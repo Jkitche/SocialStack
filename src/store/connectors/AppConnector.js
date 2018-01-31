@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import AppStore from '../store/AppStore';
-import App from '../App';
+import AppStore from '../AppStore';
+import App from '../../App';
 
 /**
  * Connects Redux store to the App
@@ -19,4 +19,4 @@ const ProvidedApp = (props) => {
 
 export default ProvidedApp;
 
-ReactDOM.render(React.createElement(ProvidedApp), document.getElementById('root'));
+ReactDOM.render(React.createElement(ProvidedApp), global.document.getElementById('root'));

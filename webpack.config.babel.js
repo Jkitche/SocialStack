@@ -13,7 +13,7 @@ const ENV_PRODUCTION = ENV === 'production';
 const ENV_DEVELOPMENT = ENV === 'development';
 
 const entry = {
-	'public/js/social_stack.app': './src/connectors/AppConnector.js',
+	'public/js/social_stack.app': './src/store/connectors/AppConnector.js',
 };
 
 const outputPath = path.resolve(__dirname, './');
@@ -80,8 +80,6 @@ export default {
 		extensions: ['.js', '.jsx', '.scss'],
 	},
 	externals: {
-		'SSC': 'window.CONFIG',
-		'FB': 'FB',
 	},
 	module: {
 		rules: [
@@ -109,7 +107,7 @@ export default {
 					loader: 'url-loader',
 					options: {
 						'limit': 10000,
-						'name': 'public/images/[name].[ext]',
+						'name': 'public/images/**/[name].[ext]',
 					},
 				},
 			},
