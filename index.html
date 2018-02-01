@@ -5,34 +5,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css" />
 	<title>SocialStack</title>
-	<script>
-		window.CONFIG = {
-			appId: '148455795871362',
-		};
-	</script>
+	<script src='public/js/load_facebook.js'></script>
 </head>
 <body>
 	<div id='root' style="min-height: 100vh;"></div>
-	<script>
-	window.fbAsyncInit = function() {
-		FB.init({
-			appId      : window.CONFIG.appId,
-			cookie     : true,
-			xfbml      : true,
-			version    : 'v2.11'
-		});
-
-		FB.AppEvents.logPageView();
-		window.FB = FB;
-	};
-
-	(function(d, s, id){
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) {return;}
-		js = d.createElement(s); js.id = id;
-		js.src = "https://connect.facebook.net/en_US/sdk.js";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-</script>
-<script type="text/javascript" src="public/js/social_stack.app.js"></script></body>
+</body>
 </html>

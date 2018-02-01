@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import CompressionPlugin from 'compression-webpack-plugin';
+import WriteFilePlugin from 'write-file-webpack-plugin';
 
 const ENV = process.env.NODE_ENV || 'development';
 
@@ -24,7 +25,9 @@ const output = {
 	chunkFilename: '[name].[chunkhash].js',
 };
 
-const plugins = [];
+const plugins = [
+	new WriteFilePlugin(),
+];
 
 // output gzips for production
 if (ENV_PRODUCTION) {

@@ -31,16 +31,16 @@ const FacebookLogin = (props) => {
 	};
 
 	const logoutCallback = () => {
-		global.FB.logout((response) => {
-			const parsedResponse = JSON.parse(response);
-			props.updateMetadata(
-				parsedResponse.status,
-				parsedResponse.accessToken,
-				parsedResponse.expiresIn,
-				parsedResponse.signedRequest,
-				parsedResponse.userId,
-			);
-		});
+		// window.FB.logout((response) => {
+		// 	const parsedResponse = JSON.parse(response);
+		// 	props.updateMetadata(
+		// 		parsedResponse.status,
+		// 		parsedResponse.accessToken,
+		// 		parsedResponse.expiresIn,
+		// 		parsedResponse.signedRequest,
+		// 		parsedResponse.userId,
+		// 	);
+		// });
 	};
 
 	const logoutButton = (
@@ -57,7 +57,7 @@ const FacebookLogin = (props) => {
 			{props.status === 'connected'
 				? { logoutButton }
 				: <FBReactLogin
-					appId={global.SSC.appId}
+					appId="148455795871362"
 					autoLoad
 					fields="name,email,picture"
 					callback={responseFacebook}

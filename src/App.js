@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import AppStore from './store/AppStore';
@@ -8,26 +7,19 @@ import ConnectedFacebookContent from './store/connectors/ConnectedFacebookConten
 
 /**
  * SocialStack App Container.
- * @param {object} props Component Properties. Mapped from Redux state.
  * @returns {React.ReactNode} rendered app.
  */
-const App = (props) => {
-	App.propTypes = {
-		facebookLoggedIn: PropTypes.bool,
-	};
-
-	App.defaultProps = {
-		facebookLoggedIn: false,
-	};
+const App = () => {
+	const facebookLoggedIn = AppStore.getState().FacebookReducer.status === 'connected';
 
 	return (
 		<Provider store={AppStore}>
 			<div style={{ minHeight: '100vh' }}>
 				<NavBar />
-				{props.facebookLoggedIn ? <ConnectedFacebookContent /> : null}
+				{facebookLoggedIn ? <ConnectedFacebookContent /> : null}
 			</div>
 		</Provider>
 	);
 };
 
-ReactDOM.render(React.createElement(App), global.document.getElementById('root'));
+ReactDOM.render(<App />, global.document.getElementById('root'));
